@@ -1,0 +1,70 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--  <style>-->
+<!--    #feeds {-->
+<!--      list-style: none;-->
+<!--      padding: 0;-->
+<!--      margin: 0;-->
+<!--    }-->
+
+<!--    #feeds li {-->
+<!--      background-color: #f2f2f2;-->
+<!--      padding: 20px;-->
+<!--      margin-bottom: 10px;-->
+<!--      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);-->
+<!--      transition: all 0.3s ease-in-out;-->
+<!--    }-->
+
+<!--    #feeds li:hover {-->
+<!--      transform: translateY(-5px);-->
+<!--      box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);-->
+<!--    }-->
+
+<!--    #feeds h3 {-->
+<!--      margin: 0;-->
+<!--      font-size: 24px;-->
+<!--      font-weight: bold;-->
+<!--    }-->
+
+<!--    #feeds p {-->
+<!--      font-size: 18px;-->
+<!--      margin-top: 10px;-->
+<!--      color: #333;-->
+<!--    }-->
+
+<!--    #feeds img, #feeds video {-->
+<!--      max-width: 100%;-->
+<!--      height: auto;-->
+<!--    }-->
+<!--  </style>-->
+
+<!--  <script>-->
+<!--    function getFeeds() {-->
+<!--      var xhr = new XMLHttpRequest();-->
+<!--      xhr.open('GET', '/feeds', true);-->
+<!--      xhr.onreadystatechange = function() {-->
+<!--        if (xhr.readyState === 4 && xhr.status === 200) {-->
+<!--          var feeds = JSON.parse(xhr.responseText);-->
+<!--          var list = document.getElementById('feeds');-->
+<!--          for (var i = 0; i < feeds.length; i++) {-->
+<!--            var feed = feeds[i];-->
+<!--            var item = document.createElement('li');-->
+<!--            item.innerHTML = '<h3>' + feed.title + '</h3><p>' + feed.content + '</p>';-->
+<!--            if (feed.file) {-->
+<!--              var media = feed.file.endsWith('.jpg') || feed.file.endsWith('.jpeg') || feed.file.endsWith('.png') ? '<img src="' + feed.file + '">' : '<video src="' + feed.file + '" controls></video>';-->
+<!--              item.innerHTML += media;-->
+<!--            }-->
+<!--            item.innerHTML += '<p>Likes: ' + feed.likes + ' Shares: ' + feed.shares + '</p>';-->
+<!--            list.appendChild(item);-->
+<!--          }-->
+<!--        }-->
+<!--      };-->
+<!--      xhr.send();-->
+<!--    }-->
+<!--  </script>-->
+<!--</head>-->
+<!--<body onload="getFeeds()">-->
+<!--<ul id="feeds"></ul>-->
+<!--</body>-->
+<!--</html>-->
