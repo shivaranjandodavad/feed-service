@@ -1,60 +1,52 @@
-<!--<!DOCTYPE html>-->
-<!--<html>-->
-<!--<head>-->
-<!--  <style>-->
-<!--      #feeds {-->
-<!--        list-style: none;-->
-<!--        padding: 0;-->
-<!--        margin: 0;-->
-<!--      }-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ನಿಮ್ಮ ಆಪ್💛❤️</title>
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+<!-- Add the website header -->
+<h1>ನಿಮ್ಮ ಆಪ್💛❤️</h1>
+<nav class="navbar">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+  <a href="feeds.html">Feeds</a>
+</nav>
+<!-- Add the content section -->
+<div class="content">
+  <p>Karnataka is a state in the southwestern region of India. It is the eighth largest state by population and the ninth largest by area. Bangalore, also known as Bengaluru, is the capital city of Karnataka and is one of the largest cities in India. Karnataka is known for its rich cultural heritage, including historic sites like Hampi and the Mysore Palace, as well as its scenic beauty, such as the Western Ghats mountain range and the beaches of Udupi and Gokarna.</p>
+  <div id="slideshow">
+    <img src="img/car.jpg" width="1000" height="600" alt="Image 1">
+    <img src="img/manager.jpg" width="1000" height="600" alt="Image 2">
+    <img src="img/projects.jpeg" width="1000" height="600" alt="Image 3">
+    <!-- Add more images as needed -->
+  </div>
+</div>
 
-<!--      #feeds li {-->
-<!--        background-color: #f2f2f2;-->
-<!--        padding: 20px;-->
-<!--        margin-bottom: 10px;-->
-<!--        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);-->
-<!--        transition: all 0.3s ease-in-out;-->
-<!--      }-->
+<!-- Add the navigation menu -->
 
-<!--      #feeds li:hover {-->
-<!--        transform: translateY(-5px);-->
-<!--        box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);-->
-<!--      }-->
+<!-- Add the footer -->
+<footer>
+  Copyright &copy; ನಿಮ್ಮ ಆಪ್💛❤️ 2023
+</footer>
+<script>
+      var slideIndex = 0;
+      showSlides();
 
-<!--      #feeds h3 {-->
-<!--        margin: 0;-->
-<!--        font-size: 24px;-->
-<!--        font-weight: bold;-->
-<!--      }-->
-
-<!--      #feeds p {-->
-<!--        font-size: 18px;-->
-<!--        margin-top: 10px;-->
-<!--        color: #333;-->
-<!--      }-->
-<!--    </style>-->
-
-<!--    <script>-->
-<!--      function getFeeds() {-->
-<!--        var xhr = new XMLHttpRequest();-->
-<!--        xhr.open('GET', 'http://localhost:9000/feeds', true);-->
-<!--        xhr.onreadystatechange = function() {-->
-<!--          if (xhr.readyState === 4 && xhr.status === 200) {-->
-<!--            var feeds = JSON.parse(xhr.responseText);-->
-<!--            var list = document.getElementById('feeds');-->
-<!--            for (var i = 0; i < feeds.length; i++) {-->
-<!--              var feed = feeds[i];-->
-<!--              var item = document.createElement('li');-->
-<!--              item.innerHTML = '<h3>' + feed.title + '</h3><p>' + feed.content + '</p><p>Likes: ' + feed.likes + ' Shares: ' + feed.shares + '</p>';-->
-<!--              list.appendChild(item);-->
-<!--            }-->
-<!--          }-->
-<!--        };-->
-<!--        xhr.send();-->
-<!--      }-->
-<!--    </script>-->
-<!--  </head>-->
-<!--<body onload="getFeeds()">-->
-<!--<ul id="feeds"></ul>-->
-<!--</body>-->
-<!--</html>-->
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByTagName("img");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+</body>
+</html>
